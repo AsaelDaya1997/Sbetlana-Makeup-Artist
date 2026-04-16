@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBETLANA ARTIST</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #FFF3E0, #f5e6d3);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #bfa37c;
+    letter-spacing: 5px;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+p {
+    color: #000000;
+    font-size: 18px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Imagen principal */
+body img:first-of-type {
+    width: 350px;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+body img:first-of-type:hover {
+    transform: scale(1.05);
+}
+
+/* Botón */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #bfa37c;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #a88d65;
+}
+
+/* Galería modo lujo */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    overflow: visible;
+}
+
+.galeria img {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* efecto general */
+.galeria:hover img {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+/* imagen activa */
+.galeria img:hover {
+    transform: scale(1.25);
+    opacity: 1;
+    z-index: 3;
+    position: relative;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.25);
+}
+/* 📱 DISEÑO PARA CELULAR */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    /* imagen principal */
+    body img:first-of-type {
+        width: 90%;
+    }
+
+    /* galería en 2 columnas */
+    .galeria {
+        gap: 10px;
+    }
+
+    .galeria img {
+        width: 45%;
+        height: 180px;
+    }
+
+    /* quitar efectos pesados en celular */
+    .galeria:hover img {
+        transform: none;
+        opacity: 1;
+    }
+
+    .galeria img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* botón más cómodo */
+    a {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <h1>SBETLANA</h1>
+    <h2>MAKE UP ARTIST</h2>
+
+    <img src="sbe9.jpg" alt="Maquillaje">
+
+    <div class="galeria">
+      
+        <img src="sbe3.jpg">
+        <img src="sbe4.jpg">
+        <img src="sbe5.jpg">
+        <img src="sbe6.jpg">
+        <img src="sbe7.jpg">
+        <img src="sbe8.jpg">
+        <img src="sbe09.jpg">
+        <img src="sbe.jpg">
+    </div>
+
+    <p>Resalta tu belleza en el día más importante de tu vida. Maquillaje profesional para novias.</p>
+
+    <a href="https://wa.me/523223537372" target="_blank">
+        Agenda tu cita por WhatsApp
+    </a>
+
+</body>
+</html>
