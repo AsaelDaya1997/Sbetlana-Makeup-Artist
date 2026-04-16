@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBETLANA ARTIST</title>
 
 <style>
@@ -24,7 +24,7 @@ h2 {
     color: #bfa37c;
     letter-spacing: 5px;
     font-size: 18px;
-    margin-top: 0;
+    margin-top: 40px;
 }
 
 p {
@@ -37,41 +37,17 @@ p {
 /* Imagen principal */
 body img:first-of-type {
     width: 350px;
-    margin-top: 10px;
     border-radius: 15px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
 }
 
-body img:first-of-type:hover {
-    transform: scale(1.05);
-}
-
-/* Botón */
-a {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background-color: #bfa37c;
-    color: #000000;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-a:hover {
-    background-color: #a88d65;
-}
-
-/* Galería modo lujo */
+/* Galería */
 .galeria {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 40px;
-    overflow: visible;
+    margin-top: 20px;
 }
 
 .galeria img {
@@ -80,48 +56,33 @@ a:hover {
     object-fit: cover;
     border-radius: 18px;
     transition: all 0.4s ease;
-    cursor: pointer;
 }
 
-/* efecto general */
 .galeria:hover img {
     transform: scale(0.95);
     opacity: 0.7;
 }
 
-/* imagen activa */
 .galeria img:hover {
-    transform: scale(1.25);
+    transform: scale(1.2);
     opacity: 1;
-    z-index: 3;
+    z-index: 2;
     position: relative;
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.25);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
 }
-/* 📱 DISEÑO PARA CELULAR */
+
+/* 📱 CELULAR */
 @media (max-width: 600px) {
 
-    h1 {
-        font-size: 28px;
-    }
+    h1 { font-size: 28px; }
 
     h2 {
         font-size: 14px;
         letter-spacing: 3px;
     }
 
-    p {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    /* imagen principal */
     body img:first-of-type {
         width: 90%;
-    }
-
-    /* galería en 2 columnas */
-    .galeria {
-        gap: 10px;
     }
 
     .galeria img {
@@ -129,50 +90,72 @@ a:hover {
         height: 180px;
     }
 
-    /* quitar efectos pesados en celular */
-    .galeria:hover img {
-        transform: none;
-        opacity: 1;
-    }
-
+    .galeria:hover img,
     .galeria img:hover {
         transform: none;
+        opacity: 1;
         box-shadow: none;
     }
+}
 
-    /* botón más cómodo */
-    a {
-        width: 80%;
-        font-size: 16px;
-    }
+/* BOTÓN WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
 }
 </style>
 
 </head>
 <body>
 
-    <h1>SBETLANA</h1>
-    <h2>MAKE UP ARTIST</h2>
+<h1>SBETLANA</h1>
+<h2>MAKE UP ARTIST</h2>
 
-    <img src="sbe9.jpg" alt="Maquillaje">
+<img src="sbe9.jpg" alt="Maquillaje">
 
-    <div class="galeria">
-      
-        <img src="sbe3.jpg">
-        <img src="sbe4.jpg">
-        <img src="sbe5.jpg">
-        <img src="sbe6.jpg">
-        <img src="sbe7.jpg">
-        <img src="sbe8.jpg">
-        <img src="sbe09.jpg">
-        <img src="sbe.jpg">
-    </div>
+<p>Resalta tu belleza en el día más importante de tu vida.</p>
 
-    <p>Resalta tu belleza en el día más importante de tu vida. Maquillaje profesional para novias.</p>
+<!-- 👰 NOVIAS -->
+<h2>Novias</h2>
+<div class="galeria">
+    <img src="novia1.jpg.jpg">
+    <img src="novia2.jpg.jpg">
+    <img src="novia3.jpg.jpg">
+</div>
 
-    <a href="https://wa.me/523223537372" target="_blank">
-        Agenda tu cita por WhatsApp
-    </a>
+<!-- 👑 QUINCEAÑERAS -->
+<h2>Quinceañeras</h2>
+<div class="galeria">
+    <img src="quince1.jpg">
+    <img src="quince2.jpg">
+    <img src="quince3.jpg">
+</div>
+
+<!-- 💄 SOCIALES -->
+<h2>Sociales</h2>
+<div class="galeria">
+    <img src="social1.jpg">
+    <img src="social2.jpg">
+    <img src="social3.jpg">
+</div>
+
+<!-- BOTÓN -->
+<a href="https://wa.me/523223537372" target="_blank" class="whatsapp">
+    💬 WhatsApp
+</a>
 
 </body>
 </html>
