@@ -1,47 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBETLANA ARTIST</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBETLANA ARTIST</title>
+
+<!-- FUENTE ELEGANTE -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 body {
-    background: linear-gradient(to bottom, #FFF3E0, #f5e6d3);
-    text-align: center;
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: #000000;
-    font-size: 40px;
-    margin-bottom: 5px;
+/* 🔥 HERO (VIDEO PORTADA) */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-h2 {
+.hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* capa oscura */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* contenido encima */
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* marca */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hero h2 {
+    font-size: 14px;
+    letter-spacing: 6px;
     color: #bfa37c;
-    letter-spacing: 5px;
-    font-size: 18px;
-    margin-top: 40px;
 }
 
+/* botón hero */
+.hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #bfa37c;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* SECCIONES */
+.seccion {
+    background: linear-gradient(to bottom, #FFF3E0, #f5e6d3);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* títulos */
+.seccion h2 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+    color: #000;
+}
+
+/* texto */
 p {
-    color: #000000;
+    color: #000;
     font-size: 18px;
     max-width: 400px;
     margin: 20px auto;
 }
 
-/* Imagen principal */
-body img:first-of-type {
+/* imagen principal */
+.principal {
     width: 350px;
     border-radius: 15px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Galería */
+/* GALERÍA */
 .galeria {
     display: flex;
     justify-content: center;
@@ -74,14 +143,19 @@ body img:first-of-type {
 /* 📱 CELULAR */
 @media (max-width: 600px) {
 
-    h1 { font-size: 28px; }
-
-    h2 {
-        font-size: 14px;
-        letter-spacing: 3px;
+    .hero video {
+        display: none;
     }
 
-    body img:first-of-type {
+    .hero {
+        background: #000;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .principal {
         width: 90%;
     }
 
@@ -98,7 +172,7 @@ body img:first-of-type {
     }
 }
 
-/* BOTÓN WHATSAPP */
+/* BOTÓN WHATSAPP (SIEMPRE VISIBLE) */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -116,43 +190,59 @@ body img:first-of-type {
 .whatsapp:hover {
     transform: scale(1.1);
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
-<h1>SBETLANA</h1>
-<h2>MAKE UP ARTIST</h2>
+<!-- 🎥 PORTADA CON VIDEO -->
+<section class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="fondo.mp4.mp4" type="video/mp4">
+    </video>
 
-<img src="sbe9.jpg" alt="Maquillaje">
+    <div class="hero-content">
+        <h1>SBETLANA</h1>
+        <h2>MAKEUP ARTIST</h2>
 
-<p>Resalta tu belleza en el día más importante de tu vida.</p>
+        <a href="https://wa.me/523223537372" target="_blank">
+            Agenda tu cita
+        </a>
+    </div>
+</section>
 
-<!-- 👰 NOVIAS -->
-<h2>Novias</h2>
-<div class="galeria">
-    <img src="novia1.jpg.jpg">
-    <img src="novia2.jpg.jpg">
-    <img src="novia3.jpg.jpg">
-</div>
+<!-- 👇 CONTENIDO -->
+<section class="seccion">
 
-<!-- 👑 QUINCEAÑERAS -->
-<h2>Quinceañeras</h2>
-<div class="galeria">
-    <img src="quince1.jpg">
-    <img src="quince2.jpg">
-    <img src="quince3.jpg">
-</div>
+    <img src="sbe9.jpg" class="principal">
 
-<!-- 💄 SOCIALES -->
-<h2>Sociales</h2>
-<div class="galeria">
-    <img src="social1.jpg">
-    <img src="social2.jpg">
-    <img src="social3.jpg">
-</div>
+    <p>Resalta tu belleza en el día más importante de tu vida.</p>
 
-<!-- BOTÓN -->
+    <!-- 👰 NOVIAS -->
+    <h2>Novias</h2>
+    <div class="galeria">
+        <img src="novia1.jpg">
+        <img src="novia2.jpg">
+    </div>
+
+    <!-- 👑 QUINCEAÑERAS -->
+    <h2>Quinceañeras</h2>
+    <div class="galeria">
+        <img src="quince1.jpg">
+        <img src="quince2.jpg">
+    </div>
+
+    <!-- 💄 SOCIALES -->
+    <h2>Sociales</h2>
+    <div class="galeria">
+        <img src="social1.jpg">
+        <img src="social2.jpg">
+    </div>
+
+</section>
+
+<!-- 💬 BOTÓN FIJO -->
 <a href="https://wa.me/523223537372" target="_blank" class="whatsapp">
     💬 WhatsApp
 </a>
